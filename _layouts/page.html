@@ -1,9 +1,14 @@
 ---
 layout: default
-tile: iRESTY
 ---
-<article id="page">
-	
-  {{ content }}
+<div class="post">
 
-</article>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+  <br>
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</div>
