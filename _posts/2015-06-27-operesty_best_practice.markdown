@@ -1,7 +1,8 @@
 ---
-layout: page
-title: About
-permalink: /about/
+layout: post
+title:  "OpenResty Best Practice"
+date:   2015-06-25 12:00:00
+categories: jekyll update
 ---
 OpenResty最佳实践
 =======
