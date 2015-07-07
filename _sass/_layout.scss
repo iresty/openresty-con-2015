@@ -15,6 +15,22 @@ html,body {
     margin: 0px auto;
 }
 
+.portal{
+    width: 100%;
+    background-image: url(http://2015.jsconf.cn/images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .intro{
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        margin-left: -200px;
+        margin-top: -100px;
+        left: 50%;
+        top: 50%;
+    }
+}
+
 .nav {
 	color: #707070;
 	text-transform: uppercase;
