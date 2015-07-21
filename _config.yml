@@ -1,12 +1,9 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: OpenResty Con 2015
+email: moonbingbing@gmail.com
+description: > # OpenResty Con 2015是全球第一届OpenResty技术大会，本次大会希望通过各大互联网公司的技术分享，让更多的人了解OpenResty，借此推动OpenResty的使用。
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://iresty.com" # the base hostname & protocol for your site
 github_username:  iresty
 
 # Build settings
