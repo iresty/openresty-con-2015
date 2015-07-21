@@ -1,7 +1,7 @@
 # Site settings
 title: OpenResty Con 2015
 email: moonbingbing@gmail.com
-description: > # OpenResty Con 2015是全球第一届OpenResty技术大会，本次大会希望通过各大互联网公司的技术分享，让更多的人了解OpenResty，借此推动OpenResty的使用。
+description: OpenResty Con 2015是全球第一届OpenResty技术大会，本次大会希望通过各大互联网公司的技术分享，让更多的人了解OpenResty，借此推动OpenResty的使用。
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://iresty.com" # the base hostname & protocol for your site
 github_username:  iresty
