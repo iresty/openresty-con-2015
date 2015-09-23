@@ -3,6 +3,10 @@ html {
 	position: relative;
 }
 
+body {
+	margin: 0;
+}
+
 body:before {
 	height: 50%;
 	width: 100%;

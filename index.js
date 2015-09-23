@@ -1,11 +1,19 @@
 /**
- * 感想：过度依赖jquery等库，$, on，很多原生的API不认识
- * 使用模板的重要性、reset.css, 正则表达式
- * 上下左右居中 DOM操作封装
- * 浏览器兼容、设备兼容(响应式)
+ * 感想：
+ * (1). 过度依赖jquery等库($, on，很多原生的API不认识，DOM操作封装)
+ * (2). 使用模板、reset.css, 正则表达式
+ * (3). 上下左右居中 
+ * (4). 浏览器兼容、设备兼容(响应式)
+ * (5). 性能上优化
  **/
 
 (function() {
+	/**
+	 * @讲师简介(需要修改简介文案直接在下面修改即可)
+	 * name：名字
+	 * job：职务
+	 * brief：简介
+	 */
 	var lecturerAbout = [{
 		name: '张开涛',
 		job: '京东服务端架构师',
@@ -28,7 +36,7 @@
 		In his spare time he enjoys to spend his time at cottage, and be close to nature'
 	}, {
 		name: '章亦春',
-		job: 'OpenResty 开源项⺫创建者',
+		job: 'OpenResty 开源项创建者',
 		brief: '喜欢不务正业；Nginx 与 Systemtap 贡献者。以写程序为⽣，喜欢摆弄各种 UNIX风格的工具，\
 		以及不同的编程语⾔，例如 C/C++、Lua、Perl、Python、Haskell 等等'
 	}, {
@@ -58,43 +66,62 @@
 		return document.getElementById(id);
 	};
 
+	var arrayify = function(arr) {
+		return [].slice.call(arr);
+	}
+
+	// 初始化页面触发click事件
 	var initPage = function() {
 		var aboutHtml = byId('about-tmpl').innerHTML;
-		var first = byClass('lecturer-list')[0];
 		var event = new Event('click');
 
-		first.dispatchEvent(event);
+		lecturerList.dispatchEvent(event);
 	};
 
 	var about = byId('about');
 	var lecturerList = byClass('lecturer-list')[0];
-	var clicked = null;
+	// 记录前一个被点击的头像
+	var preClickedAvatar = null;
+	var preClickedIndex = -1;
 
+	// 使用事件委托，减少事件绑定
 	lecturerList.addEventListener('click', function(e) {
 		var target = e.target;
-		var index = target.getAttribute('data-index');
+		var index = parseInt(target.getAttribute('data-index'));
 		var aboutHtml = byId('about-tmpl').innerHTML;
+		// 检测是否头像为140像素
+		var isAvatar140 = function(target) {
+			return arrayify(target.classList).indexOf('avatar-140') != -1 ? true : false;
+		};
 
-		if (index === null) {
-			target = target.firstElementChild;
-			index = 1;
+		if (isAvatar140(target)) {
+			return false;
 		}
 
+		// 初始化显示头像为章亦春
+		if (index === 0) {
+			target = target.children[3];
+			index = 4;
+			preClickedIndex = index;
+		}
+
+		// 使用简单的HTML模板
 		aboutHtml = aboutHtml.replace(/{(\w+)}/g, function($1, $2) {
 			return lecturerAbout[index - 1][$2];
 		});
 
-		if (clicked) {
-			console.log(clicked);
-			clicked.firstElementChild.style.display = 'none';
+		if (preClickedAvatar && preClickedIndex != index) {
+			console.log(preClickedAvatar);
+			preClickedAvatar.firstElementChild.style.display = 'none';
 		}
 
 		target.firstElementChild.style.display = 'inline-block';
 
 		about.innerHTML = aboutHtml;
-		clicked = target;
+		preClickedAvatar = target;
+		preClickedIndex = index;
+
 	}, false);
 
 	initPage();
-
 })()
