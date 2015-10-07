@@ -139,44 +139,37 @@ body:before {
 
 /*1*/
 .kaitao {
-	background: url(images/kaitao.png) no-repeat;
-	background-size: cover;
+	background: url(images/kaitao.png) 0% / cover no-repeat;
 }
 
 /*2*/
 .zhangshuai {
-	background: url(images/zhangshuai.png) no-repeat;
-	background-size: cover;
+	background: url(images/zhangshuai.png) 0% / cover no-repeat;
 }
 
 /*3*/
 .aapo {
-	background: url(images/aapo.png) no-repeat;
-	background-size: cover;
+	background: url(images/aapo.png) 0% / cover no-repeat;
 }
 
 /*4*/
 .chun {
-	background: url(images/chun.png) no-repeat;
-	background-size: cover;
+	background: url(images/chun.png) 0% / cover no-repeat;
 }
 
 /*5*/
 .dejiang {
-	background: url(images/dejiang.png) no-repeat;
-	background-size: cover;
+	background: url(images/dejiang.png) 0% / cover no-repeat;
 }
 
 /*6*/
 .weibin {
-	background: url(images/weibin.png) no-repeat;
-	background-size: cover;
+	background: url(images/weibin.png) 0% / cover no-repeat;
 }
 
 /*7*/
 .zhangcong {
-	background: url(images/zhangcong.png) no-repeat;
-	background-size: cover;
+	background: url(images/zhangcong.png) 0% / cover no-repeat;
 }
 
 .QRcode {

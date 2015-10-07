@@ -14,13 +14,6 @@ var inlinesource = require('gulp-inline-source');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 
-
-gulp.task('default', function() {
-	return gulp.src('index.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('scripts'));
-});
-
 gulp.task('test', function() {
 	return gulp.src(['index.js', 'test.js'])
 		.pipe(concat('testandindex.js'))
@@ -30,7 +23,7 @@ gulp.task('test', function() {
 gulp.task('inlinesource', function() {
 	return gulp.src('index.html')
 		.pipe(inlinesource())
-		.pipe(gulp.dest('scripts'));
+		.pipe(gulp.dest('.'));
 });
 
 gulp.task('imagemin', function() {
@@ -42,3 +35,7 @@ gulp.task('imagemin', function() {
 		}))
 		.pipe(gulp.dest('images/'));
 });
+
+gulp.task('default', ['inlinesource', 'imagemin']);
+
+// gulp.watch('src/**', ['inlinesource']);
