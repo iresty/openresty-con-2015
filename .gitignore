@@ -32,6 +32,6 @@ dist/app.css
 .idea/
 pub
 
-images.min
+images.original
 sprites.css
 CNAME

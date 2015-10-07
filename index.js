@@ -66,10 +66,6 @@
 		return document.getElementById(id);
 	};
 
-	var arrayify = function(arr) {
-		return [].slice.call(arr);
-	}
-
 	// 初始化页面触发click事件, 显示章亦春图片
 	var initPage = function() {
 		var aboutHtml = byId('about-tmpl').innerHTML;
@@ -77,6 +73,22 @@
 
 		event.INIT_PAGE = true;
 		lecturerList.dispatchEvent(event);
+
+		lecturerList.addEventListener('mouseover', function(e) {
+			var target = e.target;
+			if (target.classList.contains('gray')) {
+				target.classList.remove('gray');
+				target.addEventListener('mouseout', function addGray(e) {
+					if (!this.classList.contains('largen')) {
+						this.classList.add('gray');
+						target.removeEventListener('mouseout', addGray);
+					}
+				}, false);
+				// 停止事件冒泡
+				e.stopPropagation();
+			}
+		}, false);
+
 	};
 
 	var about = byId('about');
@@ -90,12 +102,9 @@
 		var target = e.target;
 		var index = parseInt(target.getAttribute('data-index'));
 		var aboutHtml = byId('about-tmpl').innerHTML;
-		// 检测是否头像为140像素, 即是放大的图片
-		var isAvatar140 = function(target) {
-			return arrayify(target.classList).indexOf('avatar-140') != -1 ? true : false;
-		};
 
-		if (isAvatar140(target)) {
+		// 检测是否头像为140像素, 即是放大的图片
+		if (target.classList.contains('avatar-140')) {
 			return false;
 		}
 
@@ -106,7 +115,7 @@
 			preClickedIndex = index;
 		}
 
-		if(index === 0) {
+		if (index === 0) {
 			return false;
 		}
 
@@ -116,10 +125,14 @@
 		});
 
 		if (preClickedAvatar && preClickedIndex != index) {
-			preClickedAvatar.firstElementChild.style.display = 'none';
+			// preClickedAvatar.firstElementChild.style.display = 'none';
+			preClickedAvatar.classList.add('gray');
+			preClickedAvatar.classList.remove('largen');
 		}
 
-		target.firstElementChild.style.display = 'inline-block';
+		target.classList.remove('gray');
+		target.classList.add('largen');
+		// target.firstElementChild.style.display = 'inline-block';
 
 		about.innerHTML = aboutHtml;
 		preClickedAvatar = target;

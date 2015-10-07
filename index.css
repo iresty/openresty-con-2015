@@ -21,11 +21,6 @@ body:before {
 	top: 0;
 	z-index: -1;
 	content: ''; 
-	-webkit-filter: blur(4px);
-	-moz-filter: blur(4px);
-	-ms-filter: blur(4px);
-	-o-filter: blur(4px);	
-	filter: blur(4px);
 }
 
 .intro {
@@ -53,7 +48,7 @@ body:before {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.3);
+	box-shadow: 0 .1em .2em rgba(0, 0, 0, .3);
 	transition: .7s;
 }
 
@@ -69,12 +64,22 @@ body:before {
 	width: 100%;
 	-webkit-padding-start: 0;
 	margin: 0;
+	height: 150px;
+}
+
+.lecturer-list:after {
+	content: '';
+	height: 100%;
+	width: 0;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .lecturer-list li {
+	vertical-align: middle;
 	display: inline-block;
-	height: 102px;
-	width: 102px;
+	height: 98px;
+	width: 98px;
 	margin-left: 20px;
 }
 
@@ -86,7 +91,7 @@ body:before {
 	position: relative;
 	height: 10px;
 	background: url(images/line.png) repeat-x;
-	top: 80px;
+	top: 105px;
 	z-index: -10;
 }
 
@@ -116,138 +121,67 @@ body:before {
 	margin-top: 5px;
 }
 
-/*肖像*/
-.avatar-140 {
-	display: inline-block;
+/*置灰*/
+.gray { 
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+
+/*变大*/
+.lecturer-list li.largen {
 	height: 140px;
 	width: 140px;
-	position: absolute;
-	top: -15px;
-	left: -18px;
 }
 
 /*1*/
 .kaitao {
-	background: url(images/kaitao-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.kaitao:hover {
-	background: url(images/kaitao.png) no-repeat;
-	background-size: cover;
-}
-
-.kaitao-140 {
 	background: url(images/kaitao.png) no-repeat;
 	background-size: cover;
 }
 
 /*2*/
 .zhangshuai {
-	background: url(images/zhangshuai-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.zhangshuai:hover {
-	background: url(images/zhangshuai.png) no-repeat;
-	background-size: cover;
-}
-
-.zhangshuai-140 {
 	background: url(images/zhangshuai.png) no-repeat;
 	background-size: cover;
 }
 
 /*3*/
 .aapo {
-	background: url(images/aapo-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.aapo:hover {
-	background: url(images/aapo.png) no-repeat;
-	background-size: cover;
-}
-
-.aapo-140 {
 	background: url(images/aapo.png) no-repeat;
 	background-size: cover;
 }
 
 /*4*/
 .chun {
-	background: url(images/chun-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.chun:hover {
-	background: url(images/chun.png) no-repeat;
-	background-size: cover;
-}
-
-.chun-140 {
 	background: url(images/chun.png) no-repeat;
 	background-size: cover;
 }
 
 /*5*/
 .dejiang {
-	background: url(images/dejiang-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.dejiang:hover {
-	background: url(images/dejiang.png) no-repeat;
-	background-size: cover;
-}
-
-.dejiang-140 {
 	background: url(images/dejiang.png) no-repeat;
 	background-size: cover;
 }
 
 /*6*/
 .weibin {
-	background: url(images/weibin-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.weibin:hover {
-	background: url(images/weibin.png) no-repeat;
-	background-size: cover;
-}
-
-.weibin-140 {
 	background: url(images/weibin.png) no-repeat;
 	background-size: cover;
 }
 
 /*7*/
 .zhangcong {
-	background: url(images/zhangcong-gray.png) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.zhangcong:hover {
-	background: url(images/zhangcong.png) no-repeat;
-	background-size: cover;
-}
-
-.zhangcong-140 {
 	background: url(images/zhangcong.png) no-repeat;
 	background-size: cover;
 }
 
 .QRcode {
 	position: absolute;
-	top: 200px;
+	top: 240px;
 	right: 13%;
 	height: 108px;
 	width: 108px;
