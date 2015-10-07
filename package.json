@@ -1,0 +1,11 @@
+{
+  "name": "openresty",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-uglify": "^1.4.1",
+    "imagemin-pngquant": "^4.2.0"
+  }
+}

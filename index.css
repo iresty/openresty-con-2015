@@ -1,6 +1,7 @@
 html {
 	height: 100%;
 	position: relative;
+	min-width: 960px;
 }
 
 body {
@@ -26,7 +27,6 @@ body:before {
 	-o-filter: blur(4px);	
 	filter: blur(4px);
 }
-
 
 .intro {
 	color: white;

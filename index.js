@@ -4,7 +4,7 @@
  * (2). 使用模板、reset.css, 正则表达式
  * (3). 上下左右居中 
  * (4). 浏览器兼容、设备兼容(响应式)
- * (5). 性能上优化
+ * (5). 性能上优化 (http://web.jobbole.com/82551/)
  **/
 
 (function() {
@@ -17,7 +17,7 @@
 	var lecturerAbout = [{
 		name: '张开涛',
 		job: '京东服务端架构师',
-		brief: '2014年加入京东,主要负责商品详情页、详情页统⼀服务架构与开发⼯作，设计并开发了多个亿级访问量系统。\
+		brief: '2014年加入京东,主要负责商品详情页、详情页统服务架构与开发作，设计并开发了多个亿级访问量系统。\
 		工作之余喜欢写技术博客,有《跟我学Spring》、《跟我学Spring MVC》、《跟我学Shiro》、《跟我学Nginx+Lua开发》\
 		等系列教程,目前博客访问量有460万+'
 	}, {
@@ -38,7 +38,7 @@
 		name: '章亦春',
 		job: 'OpenResty 开源项创建者',
 		brief: '喜欢不务正业；Nginx 与 Systemtap 贡献者。以写程序为⽣，喜欢摆弄各种 UNIX风格的工具，\
-		以及不同的编程语⾔，例如 C/C++、Lua、Perl、Python、Haskell 等等'
+		以及不同的编程语，例如 C/C++、Lua、Perl、Python、Haskell 等等'
 	}, {
 		name: '朱德江',
 		job: '广州酷狗ngx_lua实践者',
@@ -53,7 +53,7 @@
 	}, {
 		name: '张聪',
 		job: 'UPYUN系统开发工程师',
-		brief: '目前主要负责 UPYUN CDN 相关的设计和开发⼯工作，兼部分 UPYUN 分布式存储系统相关的运维工作；\
+		brief: '目前主要负责 UPYUN CDN 相关的设计和开发工作，兼部分 UPYUN 分布式存储系统相关的运维工作；\
 		在 NGINX C 模块和 OpenResty / ngx_lua 模块的开发和维护方面有一些经验积累，同时热衷于推动公司内部的测试及运维自动化。偶尔会关注 C, Lua, Python, Erlang 相关的编程语\
 		言社区，同时对 Redis, NGINX 源代码研究工作非常感兴趣，崇尚简单实用的工程实践'
 	}];
@@ -70,11 +70,12 @@
 		return [].slice.call(arr);
 	}
 
-	// 初始化页面触发click事件
+	// 初始化页面触发click事件, 显示章亦春图片
 	var initPage = function() {
 		var aboutHtml = byId('about-tmpl').innerHTML;
 		var event = new Event('click');
 
+		event.INIT_PAGE = true;
 		lecturerList.dispatchEvent(event);
 	};
 
@@ -89,7 +90,7 @@
 		var target = e.target;
 		var index = parseInt(target.getAttribute('data-index'));
 		var aboutHtml = byId('about-tmpl').innerHTML;
-		// 检测是否头像为140像素
+		// 检测是否头像为140像素, 即是放大的图片
 		var isAvatar140 = function(target) {
 			return arrayify(target.classList).indexOf('avatar-140') != -1 ? true : false;
 		};
@@ -99,10 +100,14 @@
 		}
 
 		// 初始化显示头像为章亦春
-		if (index === 0) {
+		if (e.INIT_PAGE) {
 			target = target.children[3];
 			index = 4;
 			preClickedIndex = index;
+		}
+
+		if(index === 0) {
+			return false;
 		}
 
 		// 使用简单的HTML模板
@@ -111,7 +116,6 @@
 		});
 
 		if (preClickedAvatar && preClickedIndex != index) {
-			console.log(preClickedAvatar);
 			preClickedAvatar.firstElementChild.style.display = 'none';
 		}
 
