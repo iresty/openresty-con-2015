@@ -2,6 +2,7 @@ html {
 	height: 100%;
 	position: relative;
 	min-width: 960px;
+	min-height: 530px;
 }
 
 body {
@@ -26,10 +27,9 @@ body:before {
 .intro {
 	color: white;
 	position: absolute;
-	bottom: 50%;
+	bottom: 67%;
 	right: 0;
 	left: 0;
-	top: 15%;
 	margin: auto;
 	width: 40%;
 	text-align: center;
