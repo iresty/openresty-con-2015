@@ -81,6 +81,8 @@ body:before {
 	height: 98px;
 	width: 98px;
 	margin-left: 20px;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 
 .lecturer-list li:first-child {
