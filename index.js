@@ -17,7 +17,7 @@
 	var lecturerAbout = [{
 		name: '张开涛',
 		job: '京东服务端架构师',
-		brief: '2014年加入京东,主要负责商品详情页、详情页统服务架构与开发作，设计并开发了多个亿级访问量系统。\
+		brief: '2014年加入京东,主要负责商品详情页、详情页统服务架构与开发，设计并开发了多个亿级访问量系统。\
 		工作之余喜欢写技术博客,有《跟我学Spring》、《跟我学Spring MVC》、《跟我学Shiro》、《跟我学Nginx+Lua开发》\
 		等系列教程,目前博客访问量有460万+'
 	}, {
@@ -36,20 +36,20 @@
 		In his spare time he enjoys to spend his time at cottage, and be close to nature'
 	}, {
 		name: '章亦春',
-		job: 'OpenResty 开源项创建者',
-		brief: '喜欢不务正业；Nginx 与 Systemtap 贡献者。以写程序为⽣，喜欢摆弄各种 UNIX风格的工具，\
+		job: 'OpenResty 开源项目创建者',
+		brief: '喜欢不务正业，Nginx 与 Systemtap 贡献者。以写程序为主，喜欢摆弄各种 UNIX风格的工具，\
 		以及不同的编程语，例如 C/C++、Lua、Perl、Python、Haskell 等等'
 	}, {
 		name: '朱德江',
 		job: '广州酷狗ngx_lua实践者',
 		brief: '五年前非常有幸在淘宝量子统计实习，能有机会近距离感受春哥和openresty的魅力。毕业后在北京一家创业公司，业余时间学习ngx_lua，应用openresty搞些兴趣项目。\
-		两年前，来到了广州，将 openresty 应⽤于常规业务服务和核心基础服务。openresty社区尤其是春哥认真的回复，每次都让我收获许多；\
+		两年前，来到了广州，将 openresty 应用于常规业务服务和核心基础服务。openresty社区尤其是春哥认真的回复，每次都让我收获许多；\
 		我也能开始模仿着写些周边类库，resty-rsa，resty-kafka，希望能反馈社区，和大家一起玩得开心。'
 	}, {
 		name: '姚伟斌',
 		job: '阿里云web平台组研发高级专家',
 		brief: '现在正致力于通过阿里CDN让阿里云用户享受到稳定、快速、安全、低成本的内容分发服务。曾经就职于网易杭州研究院，开源软件开发\
-		者与倡导者，开发多个知名Nginx模块，tengine核心开发人员，openresty的忠实⽤户。研究方向：高性能web服务器、cache服务器、网络加速、网络安全、大规模系统的运维自动化。'
+		者与倡导者，开发多个知名Nginx模块，tengine核心开发人员，openresty的忠实用户。研究方向：高性能web服务器、cache服务器、网络加速、网络安全、大规模系统的运维自动化。'
 	}, {
 		name: '张聪',
 		job: 'UPYUN系统开发工程师',
