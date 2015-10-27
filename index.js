@@ -8,7 +8,7 @@
  * (6). 两个数据源对应一个模板
  **/
 
-(function() {
+(function(document) {
 	/**
 	 * @讲师简介(需要修改简介文案直接在下面修改即可)
 	 * name：名字
@@ -218,4 +218,4 @@
 	}, false);
 
 	initPage();
-})()
+})(document)

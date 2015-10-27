@@ -5,6 +5,7 @@ html {
 	min-height: 530px;
 }
 
+/*reset*/
 body {
 	margin: 0;
 }
@@ -18,7 +19,7 @@ a {
 	text-decoration: none;
 }
 
-/*工具*/
+/*工具类*/
 .w180 {
 	width: 180px;
 }
@@ -52,16 +53,12 @@ a {
 }
 
 body:before {
-	height: 50%;
 	width: 100%;
+	height: 515px;
 	background-image: url(images/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	top: 0;
+	display: block;
 	z-index: -1;
 	content: ''; 
 }
@@ -96,9 +93,11 @@ body:before {
 }
 
 .lecturer {
-	position: absolute;
-	top: 50%;
+	/*position: absolute;*/
+	position: relative;
+	/*top: 50%;*/
 	width: 100%;
+	height: 420px;
 }
 
 .lecturer-list {
@@ -146,6 +145,7 @@ body:before {
 	font-size: 15px;
 	margin-top: 35px;
 	position: relative;
+	min-width: 520px;
 }
 
 #about .title {
@@ -223,14 +223,10 @@ body:before {
 	width: 108px;
 }
 
-/*详细内容包含日程表/赞助商*/
+/*详细内容包含日程表 & 赞助商*/
 .detail {
-	position: absolute;
-	top: 90%;
 	width: 700px;
-	left: 50%;
-	margin-left: -350px;
-
+	margin: 20px auto;
 }
 
 /*日程表*/
