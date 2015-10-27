@@ -5,6 +5,7 @@
  * (3). 上下左右居中 
  * (4). 浏览器兼容、设备兼容(响应式)
  * (5). 性能上优化 (http://web.jobbole.com/82551/)
+ * (6). 两个数据源对应一个模板
  **/
 
 (function() {
@@ -58,6 +59,60 @@
 		言社区，同时对 Redis, NGINX 源代码研究工作非常感兴趣，崇尚简单实用的工程实践'
 	}];
 
+	/**
+	 * @日程表
+	 * time：时间点
+	 * name: 名字
+	 * doing：干嘛
+	 */
+	var schedule = [{
+		time: '8:30',
+		doing: '<span class="red">签到</span>',
+	}, {
+		time: '9:00',
+		doing: '开场',
+	}, {
+		time: '9:15',
+		name: '张聪',
+		doing: 'Using ngx_lua In UPYUN 2',
+	}, {
+		time: '10:00',
+		name: '张帅',
+		doing: 'Be MicroService Hero',
+	}, {
+		time: '10:55',
+		doing: '<span class="green">颁奖</span>',
+	}, {
+		time: '11:05',
+		name: 'Aapo Talvensaari',
+		doing: '待定',
+	}, {
+		time: '12:00',
+		doing: '<span class="blue">午餐</span>',
+	}, {
+		time: '13:20',
+		doing: '<span class="green">颁奖</span>',
+	}, {
+		time: '13:30',
+		name: '章亦春',
+		doing: '浅谈OpenResty未来发展',
+	}, {
+		time: '14:30',
+		name: '姚伟斌',
+		doing: '待定',
+	}, {
+		time: '15:25',
+		doing: '<span class="blue">茶歇</span>',
+	}, {
+		time: '15:45',
+		name: '朱德江',
+		doing: '基于OpenResty的百万级长连接推送',
+	}, {
+		time: '16:45',
+		name: '张开涛',
+		doing: 'Nginx+Lua在京东商品详情页的大规模应用',
+	}];
+
 	var byClass = function(className) {
 		return document.getElementsByClassName(className);
 	};
@@ -88,6 +143,28 @@
 				e.stopPropagation();
 			}
 		}, false);
+
+		document.addEventListener("DOMContentLoaded", function(event) {
+			// 需要重构
+			console.log("DOM fully loaded and parsed");
+			var scheduleTmpl1 = byId('schedule-tmpl-1').innerHTML;
+			var scheduleTmpl2 = byId('schedule-tmpl-2').innerHTML;
+			var scheduleHtml = '';
+			schedule.forEach(function(value, index) {
+				if (index % 2 == 0) {
+					scheduleHtml += '<li>';
+					scheduleHtml += scheduleTmpl1.replace(/{(\w+)}/g, function($1, $2) {
+						return value[$2] ? value[$2] : '';
+					});
+				} else {
+					scheduleHtml += scheduleTmpl2.replace(/{(\w+)}/g, function($1, $2) {
+						return value[$2] ? value[$2] : '';
+					});
+					scheduleHtml += '</li>';
+				}
+			});
+			byId('schedule-list').innerHTML = scheduleHtml;
+		});
 
 	};
 
