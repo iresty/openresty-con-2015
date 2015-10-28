@@ -66,52 +66,56 @@
 	 * doing：干嘛
 	 */
 	var schedule = [{
-		time: '8:30',
-		doing: '<span class="red">签到</span>',
+		time: "8:30",
+		doing: '<span class="red">签到</span>'
 	}, {
-		time: '9:00',
-		doing: '开场',
+		time: "9:00",
+		doing: "开场"
 	}, {
-		time: '9:15',
-		name: '张聪',
-		doing: 'Using ngx_lua In UPYUN 2',
+		time: "9:15",
+		name: "张聪",
+		doing: "Using ngx_lua In UPYUN 2"
 	}, {
-		time: '10:00',
-		name: '张帅',
-		doing: 'Be MicroService Hero',
+		time: "10:10",
+		name: "张帅",
+		doing: "Be MicroService Hero"
 	}, {
-		time: '10:55',
-		doing: '<span class="green">颁奖</span>',
+		time: "11:05",
+		name: "",
+		doing: '<span class="blue">闪电演讲</span>'
 	}, {
-		time: '11:05',
-		name: 'Aapo Talvensaari',
-		doing: '待定',
+		time: "11:20",
+		doing: '<span class="green">颁奖</span>'
 	}, {
-		time: '12:00',
-		doing: '<span class="blue">午餐</span>',
+		time: "11:25",
+		name: "Aapo Talvensaari",
+		doing: "Developing OpenResty Framework"
 	}, {
-		time: '13:20',
-		doing: '<span class="green">颁奖</span>',
+		time: "12:20",
+		doing: '<span class="red">午餐</span>'
 	}, {
-		time: '13:30',
-		name: '章亦春',
-		doing: '浅谈OpenResty未来发展',
+		time: "13:30",
+		name: "章亦春",
+		doing: "浅谈OpenResty未来发展"
 	}, {
-		time: '14:30',
-		name: '姚伟斌',
-		doing: '待定',
+		time: "14:30",
+		name: "姚伟斌",
+		doing: "Nginx+Lua模块在阿里的使用"
 	}, {
-		time: '15:25',
-		doing: '<span class="blue">茶歇</span>',
+		time: "15:25",
+		doing: '<span class="blue">闪电演讲</span>'
 	}, {
-		time: '15:45',
-		name: '朱德江',
-		doing: '基于OpenResty的百万级长连接推送',
+		time: "15:45",
+		doing: '<span class="blue">茶歇</span>'
 	}, {
-		time: '16:45',
-		name: '张开涛',
-		doing: 'Nginx+Lua在京东商品详情页的大规模应用',
-	}];
+		time: "16:05",
+		name: "朱德江",
+		doing: "基于OpenResty的百万级长连接推送"
+	}, {
+		time: "17:00",
+		name: "张开涛",
+		doing: "Nginx+Lua在京东商品详情页的大规模应用"
+	}]
 
 	var byClass = function(className) {
 		return document.getElementsByClassName(className);

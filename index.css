@@ -20,6 +20,10 @@ a {
 }
 
 /*工具类*/
+.w110 {
+	width: 110px;
+}
+
 .w180 {
 	width: 180px;
 }
@@ -50,6 +54,10 @@ a {
 
 .mt30 {
 	margin-top: 30px;
+}
+
+.mr18 {
+	margin-right: 18px;
 }
 
 body:before {
