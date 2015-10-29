@@ -24,10 +24,6 @@ a {
 	width: 110px;
 }
 
-.w128 {
-	width: 128px;
-}
-
 .w250 {
 	width: 250px;
 }
@@ -226,7 +222,7 @@ body:before {
 .QRcode {
 	position: absolute;
 	top: 240px;
-	right: 13%;
+	right: 11.5%;
 	height: 108px;
 	width: 108px;
 }
@@ -279,11 +275,19 @@ body:before {
 	color: black;
 }
 
-/*赞助商*/
+/*合作伙伴*/
 .sponsor {
 	width: 700px;
 	text-align: center;
 	height: 300px;
 	color: #34495e;
 	text-shadow: 2px 2px 4px #34495e;
+}
+
+/*合作伙伴 logo*/
+.logo-set {
+}
+
+.logo {
+	width: 190px;
 }
