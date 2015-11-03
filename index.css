@@ -279,14 +279,12 @@ body:before {
 .sponsor {
 	width: 700px;
 	text-align: center;
-	height: 300px;
+	height: 380px;
 	color: #34495e;
 	text-shadow: 2px 2px 4px #34495e;
 }
 
 /*合作伙伴 logo*/
-.logo-set {
-}
 
 .logo {
 	width: 190px;
