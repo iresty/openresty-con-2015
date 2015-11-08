@@ -285,7 +285,16 @@ body:before {
 }
 
 /*合作伙伴 logo*/
-
 .logo {
 	width: 190px;
+}
+
+.powered-by {
+	text-align: center;
+	color: #ccc;
+	font-family: consolas;
+}
+
+.my-github {
+	color: #2674BA;
 }
