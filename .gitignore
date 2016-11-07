@@ -32,6 +32,10 @@ dist/app.css
 .idea/
 pub
 
+.DS_Store
+
 images.original
 sprites.css
 src
+data.json
+todo.md

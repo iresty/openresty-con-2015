@@ -1,7 +1,5 @@
 /**
  * 实现把js压缩放置在html的script标签 用inlinesource
- *
- * gulp-imagemin使用：(http://www.dtao.org/archives/26)
  */
 'use strict'
 
@@ -20,22 +18,21 @@ gulp.task('test', function() {
 		.pipe(gulp.dest('scripts'));
 });
 
-gulp.task('inlinesource', function() {
-	return gulp.src('index.html')
-		.pipe(inlinesource())
-		.pipe(gulp.dest('.'));
-});
+// gulp.task('inlinesource', function() {
+// 	return gulp.src('pre_index.html')
+// 		.pipe(inlinesource())
+// 		.pipe(gulp.dest('./index.html'));
+// });
 
 gulp.task('imagemin', function() {
 	return gulp.src('images/*')
 		.pipe(imagemin({
 			// 无损压缩jpg
-			progressive: true,
+			// progressive: true,
 			use: [pngquant()]
 		}))
 		.pipe(gulp.dest('images/'));
 });
 
-gulp.task('default', ['inlinesource', 'imagemin']);
-
+// gulp.task('default', ['imagemin']);
 // gulp.watch('src/**', ['inlinesource']);

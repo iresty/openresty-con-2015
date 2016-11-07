@@ -64,6 +64,7 @@ body:before {
 }
 
 .intro {
+	width: 100%;
 	color: white;
 	position: absolute;
 	top: 15%;
@@ -144,7 +145,7 @@ body:before {
 	font-size: 15px;
 	margin-top: 35px;
 	position: relative;
-	min-width: 520px;
+	/*min-width: 520px;*/
 }
 
 #about .title {
@@ -293,3 +294,83 @@ body:before {
 .my-github {
 	color: #2674BA;
 }
+
+@media (max-width: 420px) {
+	html {
+		min-width: 0;
+	}
+	body:before {
+		height: 400px;
+		background-position: center 50%;
+	}
+
+	.intro {
+		transform: scale(.8);
+	}
+
+	/*不要线*/
+	.line {
+		display: none;
+	}
+
+	.lecturer {
+		height: auto;
+	}
+
+	.lecturer-list {
+		display: none;
+	}
+
+	#about {
+		width: 80%;
+		font-family: consolas;
+	}
+
+	#about .brief {
+		line-height: 1.5;
+	}
+
+	#about .avatar {
+		border: 2px solid #ccc;
+		border-radius: 50%;
+		height: 150px;
+		width: 150px;
+		margin: 0 auto;
+	}
+
+	.detail {
+		width: 100%;
+	}
+
+	.schedule {
+		width: 100%;
+	}
+
+	#schedule-list > li {
+		text-align: center;
+	}
+
+	.schedule-item {
+		text-align: left;
+		width: 90%;
+	}
+
+	.sponsor {
+		height: auto;
+		width: 100%;
+	}
+	
+	.logo-set {
+		margin: 0;
+	}
+
+	.logo-set a {
+		display: block;
+		margin-top: 10px;
+	}
+
+	.logo {
+		width: 250px;
+	}
+}
+
