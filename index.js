@@ -23,28 +23,21 @@
 	 * 暴露出数据为了兼容移动端
 	 */
 	global.__LECTURER_ABOUT__ = lecturerAbout = [{
-		class: 'kaitao',
-		name: '张开涛',
-		job: '京东服务端架构师',
-		brief: '2014年加入京东,主要负责商品详情页、详情页统服务架构与开发，设计并开发了多个亿级访问量系统。\
-		工作之余喜欢写技术博客,有《跟我学Spring》、《跟我学Spring MVC》、《跟我学Shiro》、《跟我学Nginx+Lua开发》\
-		等系列教程,目前博客访问量有460万+'
+		class: 'zhaoyu',
+		name: '吴兆玉',
+		job: '今日头条高级工程师',
+		brief: '2010年、2013年分别毕业于厦门大学、北京大学，主修软件工程。\
+		期间连续多次创业，后来加入新东方做K12教育、在太美集团做过商务社交APP机遇。'
 	}, {
-		class: 'zhangshuai',
-		name: '张帅',
-		job: 'working in Adobe',
-		brief: ' He got master degree from University of California Irvine (UCI), majoring in networked \
-		systems, and bachelor degree from Beijing University of Posts and Telecommunications (BUPT).\
-		After graduation from UCI this spring of 2015, he joined Adobe to start career where he \
-		got the chance to experience with Nginx and AWS stuff.'
+		class: 'zhangshun',
+		name: '张顺',
+		job: 'AISpeech开发总监',
+		brief: '专注于将人机语音交互技术应用到生活中，设计了语音云和AIOS等语音交互基础架构。OpenResty贡献者'
 	}, {
-		class: 'aapo',
-		name: 'Aapo Talvensaari',
-		job: 'IT Manager, Aalto Capital, Finland',
-		brief: 'Aapo Talvensaari has over twenty years of experiencein consulting, software development, and systemadministration.\
-		These days his main areas of interest include web and cloud technologies.\
-		He is an active community member of OpenResty project, and an author of several OpenResty components.\
-		In his spare time he enjoys to spend his time at cottage, and be close to nature'
+		class: 'xiangwei',
+		name: '王向维',
+		job: '京东商城三级列表页架构师',
+		brief: ''
 	}, {
 		class: 'chun',
 		name: '章亦春',
@@ -52,25 +45,16 @@
 		brief: '喜欢不务正业，Nginx 与 Systemtap 贡献者。以写程序为主，喜欢摆弄各种 UNIX风格的工具，\
 		以及不同的编程语，例如 C/C++、Lua、Perl、Python、Haskell 等等'
 	}, {
-		class: 'dejiang',
-		name: '朱德江',
-		job: '广州酷狗ngx_lua实践者',
-		brief: '五年前非常有幸在淘宝量子统计实习，能有机会近距离感受春哥和openresty的魅力。毕业后在北京一家创业公司，业余时间学习ngx_lua，应用openresty搞些兴趣项目。\
-		两年前，来到了广州，将 openresty 应用于常规业务服务和核心基础服务。openresty社区尤其是春哥认真的回复，每次都让我收获许多；\
-		我也能开始模仿着写些周边类库，resty-rsa，resty-kafka，希望能反馈社区，和大家一起玩得开心。'
+		class: 'thefosk',
+		name: 'Marco Palladino',
+		job: 'CTO @Mashape',
+		brief: ''
 	}, {
-		class: 'weibin',
-		name: '姚伟斌',
-		job: '阿里云web平台组研发高级专家',
-		brief: '现在正致力于通过阿里CDN让阿里云用户享受到稳定、快速、安全、低成本的内容分发服务。曾经就职于网易杭州研究院，开源软件开发\
-		者与倡导者，开发多个知名Nginx模块，tengine核心开发人员，openresty的忠实用户。研究方向：高性能web服务器、cache服务器、网络加速、网络安全、大规模系统的运维自动化。'
-	}, {
-		class: 'zhangcong',
-		name: '张聪',
-		job: 'UPYUN系统开发工程师',
-		brief: '目前主要负责 UPYUN CDN 相关的设计和开发工作，兼部分 UPYUN 分布式存储系统相关的运维工作；\
-		在 NGINX C 模块和 OpenResty / ngx_lua 模块的开发和维护方面有一些经验积累，同时热衷于推动公司内部的测试及运维自动化。偶尔会关注 C, Lua, Python, Erlang 相关的编程语\
-		言社区，同时对 Redis, NGINX 源代码研究工作非常感兴趣，崇尚简单实用的工程实践'
+		class: 'yejing',
+		name: '叶靖',
+		job: '又拍云系统开发工程师',
+		brief: '对 Python/Lua/Go 等语言有较深入的研究，在 ngx_lua 和OpenResty模块开发方面有较多经验，\
+	专注于高并发高可用服务架构设计。平时热衷于参与开源社区分享开源经验'
 	}];
 
 	/**
@@ -79,64 +63,83 @@
 	 * name: 名字
 	 * doing：干嘛
 	 */
+	// global.__SCHEDULE__ = schedule = [{
+	// 	time: "8:30",
+	// 	doing: '<span class="red">签到</span>'
+	// }, {
+	// 	time: "9:00",
+	// 	doing: "开场"
+	// }, {
+	// 	time: "9:15",
+	// 	name: "张聪",
+	// 	doing: "Using ngx_lua In UPYUN 2",
+	// 	pdf: 'zhangcong.pdf'
+	// }, {
+	// 	time: "10:10",
+	// 	name: "张帅",
+	// 	doing: "Be MicroService Hero",
+	// 	pdf: 'zhangshuai.pdf'
+	// }, {
+	// 	time: "11:05",
+	// 	name: "",
+	// 	doing: '<span class="blue">闪电演讲(速致)</span>',
+	// 	pdf: "suzhi.pdf"
+	// }, {
+	// 	time: "11:20",
+	// 	doing: '<span class="green">颁奖</span>'
+	// }, {
+	// 	time: "11:25",
+	// 	name: "Aapo Talvensaari",
+	// 	doing: "Developing OpenResty Framework",
+	// 	pdf: 'aapo.pdf'
+	// }, {
+	// 	time: "12:20",
+	// 	doing: '<span class="red">午餐</span>'
+	// }, {
+	// 	time: "13:30",
+	// 	name: "章亦春",
+	// 	doing: "浅谈OpenResty未来发展",
+	// 	pdf: "zhangyichun.pdf"
+	// }, {
+	// 	time: "14:30",
+	// 	name: "孙传文",
+	// 	doing: "Nginx+Lua模块在阿里的使用",
+	// 	pdf: "sunchuanwen.pdf"
+	// }, {
+	// 	time: "15:25",
+	// 	doing: '<span class="blue">闪电演讲</span>'
+	// }, {
+	// 	time: "15:45",
+	// 	doing: '<span class="blue">茶歇</span>'
+	// }, {
+	// 	time: "16:05",
+	// 	name: "朱德江",
+	// 	doing: "基于OpenResty的百万级长连接推送",
+	// 	pdf: "zhudejiang.pdf"
+	// }, {
+	// 	time: "17:00",
+	// 	name: "张开涛",
+	// 	doing: "Nginx+Lua在京东商品详情页的大规模应用",
+	// 	pdf: "zhangkaitao.pdf"
+	// }];
+
 	global.__SCHEDULE__ = schedule = [{
-		time: "8:30",
-		doing: '<span class="red">签到</span>'
+		name: '吴兆玉',
+		doing: 'Orange:一个基于OpenResty的API Gateway'
 	}, {
-		time: "9:00",
-		doing: "开场"
+		name: '张顺',
+		doing: 'OpenResty与语音交互'
 	}, {
-		time: "9:15",
-		name: "张聪",
-		doing: "Using ngx_lua In UPYUN 2",
-		pdf: 'zhangcong.pdf'
+		name: '王向维',
+		doing: '京东三级列表页整体架构介绍'
+
 	}, {
-		time: "10:10",
-		name: "张帅",
-		doing: "Be MicroService Hero",
-		pdf: 'zhangshuai.pdf'
+		name: '叶靖',
+		doing: 'Nginx+Lua在云处理服务集群中的应用'
+
 	}, {
-		time: "11:05",
-		name: "",
-		doing: '<span class="blue">闪电演讲(速致)</span>',
-		pdf: "suzhi.pdf"
-	}, {
-		time: "11:20",
-		doing: '<span class="green">颁奖</span>'
-	}, {
-		time: "11:25",
-		name: "Aapo Talvensaari",
-		doing: "Developing OpenResty Framework",
-		pdf: 'aapo.pdf'
-	}, {
-		time: "12:20",
-		doing: '<span class="red">午餐</span>'
-	}, {
-		time: "13:30",
-		name: "章亦春",
-		doing: "浅谈OpenResty未来发展",
-		pdf: "zhangyichun.pdf"
-	}, {
-		time: "14:30",
-		name: "孙传文",
-		doing: "Nginx+Lua模块在阿里的使用",
-		pdf: "sunchuanwen.pdf"
-	}, {
-		time: "15:25",
-		doing: '<span class="blue">闪电演讲</span>'
-	}, {
-		time: "15:45",
-		doing: '<span class="blue">茶歇</span>'
-	}, {
-		time: "16:05",
-		name: "朱德江",
-		doing: "基于OpenResty的百万级长连接推送",
-		pdf: "zhudejiang.pdf"
-	}, {
-		time: "17:00",
-		name: "张开涛",
-		doing: "Nginx+Lua在京东商品详情页的大规模应用",
-		pdf: "zhangkaitao.pdf"
+		name: 'Marco Palladino',
+		doing: 'Microservices & API Gateways with Kong and OpenResty'
 	}]
 
 	var byClass = function(className) {

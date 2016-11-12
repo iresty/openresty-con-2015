@@ -28,27 +28,20 @@
 	<div class="intro">
 		<h1>OpenResty Con 2016</h1>
 		<h2>2016年12月10日 9:00AM @深圳</h2>
-		<h3>地址:深圳腾讯大厦</h3>
+		<h3><a target="_blank" class="address" href="http://api.map.baidu.com/geocoder?address=深圳市腾讯大厦&output=html">地址:深圳腾讯大厦</a></h3>
 		<!-- <a class="join" href="http://wap.koudaitong.com/v2/goods/1044ajovk" target="about:blank">点击参会</a> -->
 	</div>
 	<!-- 讲师 -->
 	<div class="lecturer">
 		<h4 class="line"></h4>
 		<ul class="lecturer-list" data-index="0">
-			<!-- 开涛 -->
-			<li class="gray kaitao" data-index="1"></li>
-			<!-- 张帅 -->
-			<li class="gray zhangshuai" data-index="2"></li>
-			<!-- Aapo Talvensaari -->
-			<li class="gray aapo" data-index="3"></li>
-			<!-- 章亦春 -->
+			<li class="gray zhaoyu" data-index="1"></li>
+			<li class="gray zhangshun" data-index="2"></li>
+			<li class="gray xiangwei" data-index="3"></li>
 			<li class="gray chun" data-index="4"></li>
-			<!-- 朱德江 -->
-			<li class="gray dejiang" data-index="5"></li>
-			<!-- 姚伟斌 -->
-			<li class="gray weibin" data-index="6"></li>
-			<!-- 张聪 -->
-			<li class="gray zhangcong" data-index="7"></li>
+			<li class="gray thefosk" data-index="5"></li>
+			<li class="gray yejing" data-index="6"></li>
+			<!-- <li class="gray zhangcong" data-index="7"></li> -->
 		</ul>
 		<div id="about">
 		</div>
@@ -70,8 +63,8 @@
 			<a href="//b.360.cn/" target="_blank">
 				<img class="w250" src="images/360.jpg" title="360企业安全" alt="360企业安全">
 			</a>
-			<h2 class="mt30">合作伙伴</h2>
-			<p class="logo-set">
+			<!-- <h2 class="mt30">合作伙伴</h2> -->
+			<!-- <p class="logo-set">
 				<a href="//www.kugou.com/" target="_blank">
 					<img class="logo" src="images/kugou.jpg" title="酷狗" alt="酷狗">
 				</a>			
@@ -102,7 +95,7 @@
 				<a href="//segmentfault.com/" target="_blank">
 					<img class="logo" src="images/sf.png" title="segmentfault 创造属于开发者的时代" alt="segmentfault">
 				</a>
-			</p>
+			</p> -->
 		</div>
 		<p class="powered-by">Powered by <a class="my-github" target="_blank" href="//www.monkindey.xyz/">monkindey</a></p>
 	</div>
@@ -124,13 +117,13 @@
 <!-- 日程表模板 -->
 <script id="schedule-tmpl-1" type="text/template">
 	<span class="schedule-item">{time} {name} {pdf}
-		<em class="doing">{doing}</em>
+		<em title="{doing}" class="doing">{doing}</em>
 	</span>
 </script>
 
 <script id="schedule-tmpl-2" type="text/template">
 	<span class="schedule-item fr">{time} {name} {pdf}
-		<em class="doing">{doing}</em>
+		<em title="{doing}" class="doing">{doing}</em>
 	</span>
 </script>
 

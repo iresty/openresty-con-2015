@@ -25,13 +25,13 @@ gulp.task('test', function() {
 // });
 
 gulp.task('imagemin', function() {
-	return gulp.src('images/*')
+	return gulp.src('images/lecturers/*')
 		.pipe(imagemin({
 			// 无损压缩jpg
 			// progressive: true,
 			use: [pngquant()]
 		}))
-		.pipe(gulp.dest('images/'));
+		.pipe(gulp.dest('images/lecturers'));
 });
 
 // gulp.task('default', ['imagemin']);

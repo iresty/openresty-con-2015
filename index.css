@@ -75,6 +75,11 @@ body:before {
 	font-family: consolas;
 }
 
+.address {
+	color: #ccc;
+	cursor: pointer;
+}
+
 .join {
     color: #FFF;
 	font-size: 100%;
@@ -166,11 +171,11 @@ body:before {
 
 /*置灰*/
 .gray { 
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%);
-	filter: grayscale(100%);
+	-webkit-filter: grayscale(50%);
+	-moz-filter: grayscale(50%);
+	-ms-filter: grayscale(50%);
+	-o-filter: grayscale(50%);
+	filter: grayscale(50%);
 	filter: gray;
 }
 
@@ -180,19 +185,24 @@ body:before {
 	width: 140px;
 }
 
+.lecturer-list li {
+	border-radius: 50%;
+	border: 1px solid #ccc;
+}
+
 /*1*/
-.kaitao {
-	background: url(images/kaitao.png) 0% / cover no-repeat;
+.zhaoyu {
+	background: url(images/lecturers/zhaoyu.png) 0% / cover no-repeat;
 }
 
 /*2*/
-.zhangshuai {
-	background: url(images/zhangshuai.png) 0% / cover no-repeat;
+.zhangshun {
+	background: url(images/lecturers/zhangshun.png) 0% / cover no-repeat;
 }
 
 /*3*/
-.aapo {
-	background: url(images/aapo.png) 0% / cover no-repeat;
+.xiangwei {
+	background: url(images/lecturers/xiangwei.png) 0% / cover no-repeat;
 }
 
 /*4*/
@@ -201,13 +211,13 @@ body:before {
 }
 
 /*5*/
-.dejiang {
-	background: url(images/dejiang.png) 0% / cover no-repeat;
+.thefosk {
+	background: url(images/lecturers/thefosk.png) 0% / cover no-repeat;
 }
 
 /*6*/
-.weibin {
-	background: url(images/weibin.png) 0% / cover no-repeat;
+.yejing {
+	background: url(images/lecturers/yejing.png) 0% / cover no-repeat;
 }
 
 /*7*/
@@ -231,7 +241,7 @@ body:before {
 
 /*日程表*/
 .schedule {
-	width: 700px;
+	width: 740px;
 }
 
 .schedule h1 {
@@ -267,8 +277,16 @@ body:before {
 .doing {
 	display: block;
 	font-style: normal;
+	width: 90%;
+	margin: 0 auto;
 	/*color: #2674BA;*/
 	color: black;
+	/*太多显示不下*/
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+	text-indent: 0;
 }
 
 /*合作伙伴*/
@@ -353,6 +371,10 @@ body:before {
 	.schedule-item {
 		text-align: left;
 		width: 90%;
+	}
+
+	.doing {
+		white-space: pre-wrap;
 	}
 
 	.sponsor {
