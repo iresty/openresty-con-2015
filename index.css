@@ -3,6 +3,7 @@ html {
 	position: relative;
 	min-width: 960px;
 	min-height: 530px;
+	font-family: consolas, 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /*reset*/
@@ -72,7 +73,12 @@ body:before {
 	left: 0;
 	margin: auto;
 	text-align: center;
-	font-family: consolas;
+}
+
+.or-logo {
+	height: 50px;
+	width: 50px;
+	vertical-align: -10px;
 }
 
 .address {
@@ -271,7 +277,6 @@ body:before {
 	line-height: 24px;
 	box-shadow: 1px 1px #ccc;
 	border-radius: 3px;
-	font-family: consolas;
 }
 
 .doing {
@@ -306,7 +311,6 @@ body:before {
 .powered-by {
 	text-align: center;
 	color: #ccc;
-	font-family: consolas;
 }
 
 .my-github {
@@ -326,6 +330,12 @@ body:before {
 		transform: scale(.8);
 	}
 
+	.or-logo {
+		height: 40px;
+		width: 40px;
+		vertical-align: -8px;
+	}
+
 	/*不要线*/
 	.line {
 		display: none;
@@ -341,7 +351,6 @@ body:before {
 
 	#about {
 		width: 80%;
-		font-family: consolas;
 	}
 
 	#about .brief {

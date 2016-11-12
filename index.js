@@ -135,7 +135,7 @@
 
 	}, {
 		name: '叶靖',
-		doing: 'Nginx+Lua在云处理服务集群中的应用'
+		doing: 'OpenResty在云处理服务集群中的应用'
 
 	}, {
 		name: 'Marco Palladino',
