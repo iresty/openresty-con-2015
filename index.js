@@ -37,7 +37,8 @@
 		class: 'xiangwei',
 		name: '王向维',
 		job: '京东商城三级列表页架构师',
-		brief: ''
+		brief: '工作期间，完成了京东三级列表页由Node.js版本到OpenResty的变迁，\
+		并针对三级列表页前端即服务器端做了大量的优化工作。'
 	}, {
 		class: 'chun',
 		name: '章亦春',

@@ -90,11 +90,11 @@ body:before {
     color: #FFF;
 	font-size: 100%;
 	display: inline-block;
-	background: #00B220;
-	padding: .5em 1.5em;
+	background-color: #00B220;
+	padding: .8em 1.8em;
 	margin: 0.5em 0 0 0;
 	line-height: 1;
-	border-radius: 1em;
+	border-radius: 1.2em;
 	text-decoration: none;
 	border: none;
 	outline: none;
@@ -193,7 +193,7 @@ body:before {
 
 .lecturer-list li {
 	border-radius: 50%;
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 }
 
 /*1*/
@@ -308,11 +308,23 @@ body:before {
 	width: 190px;
 }
 
-.powered-by {
+.powered-by, .provided-by {
 	text-align: center;
 	color: #ccc;
 }
 
+.powered-by {
+	margin-bottom: 10px;
+}
+
+.provided-by {
+	padding: 0 10px;
+	/*font-size: 14px;*/
+}
+
+.foundation,
+.tencent,
+.zhuhai-open,
 .my-github {
 	color: #2674BA;
 }
@@ -358,7 +370,7 @@ body:before {
 	}
 
 	#about .avatar {
-		border: 2px solid #ccc;
+		/*border: 2px solid #ccc;*/
 		border-radius: 50%;
 		height: 150px;
 		width: 150px;
