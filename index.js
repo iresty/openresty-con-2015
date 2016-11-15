@@ -125,6 +125,12 @@
 	// }];
 
 	global.__SCHEDULE__ = schedule = [{
+		time: "8:30",
+		doing: '<span class="red">签到</span>'
+	}, {
+		time: "9:00",
+		doing: "开场"
+	}, {
 		name: '吴兆玉',
 		doing: 'Orange:一个基于OpenResty的API Gateway'
 	}, {
@@ -140,6 +146,7 @@
 
 	}, {
 		name: 'Marco Palladino',
+		title: 'Microservices & API Gateways with Kong and OpenResty',
 		doing: 'Microservices & API Gateways with Kong and OpenResty'
 	}]
 
