@@ -307,6 +307,11 @@ body:before {
 	width: 150px;
 }
 
+.stuq {
+	width: 120px;
+	margin-left: 10px;
+}
+
 /*合作伙伴 logo*/
 .logo {
 	width: 190px;
